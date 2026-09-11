@@ -10,11 +10,11 @@ AdTech Engineer · Bidding / High concurrency
 
 ---
 
-I build DSP bidding engines, and I write notes.
+I like systems. I care more about the market they sit in — who buys, who sells, how inventory clears, and which millisecond the stack is stuck on.
 
-OpenRTB in, a bid out, a hard `tmax` in the middle. Targeting, frequency caps, pacing, scoring, then Kafka / Flink and online inference — I take the path apart and write until I can explain it.
+I build DSP bidders and write the ecosystem and the path side by side. OpenRTB in, a bid out, a hard `tmax` in the middle. Protocols, auctions, SDKs, consent; targeting, caps, pacing, scoring; then Kafka / Flink and online inference. If it is still fuzzy, I write until I can explain it.
 
-The notes live at **[cylshao.com](https://cylshao.com)**. About 160 so far.
+If those two sides do not meet, I do not count it as understood. Notes: **[cylshao.com](https://cylshao.com)**. About 160 so far.
 
 ## Work
 
@@ -25,7 +25,7 @@ The notes live at **[cylshao.com](https://cylshao.com)**. About 160 so far.
 
 ## Writing
 
-Same question throughout: how ads actually run in production.
+Same question throughout: how traffic turns into revenue, and how the system runs in the middle.
 
 | | What I write |
 | :--- | :--- |
