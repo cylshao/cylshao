@@ -21,7 +21,12 @@ If those two sides do not meet, I do not count it as understood. Notes: **[cylsh
 - **Bidder**: parse → target → recall → score → bid. Split the latency budget first; optimize after that.
 - **Delivery**: frequency capping, budget pacing, how a campaign is compiled and pushed — full or incremental.
 - **Serving**: CTR / CVR scoring pulled out of the bidder process into its own high-concurrency service.
-- **Lately**: agent loops — tools, memory, eval, resume. Build one by hand, then look at frameworks.
+
+## Lately
+
+AI agents. A chat can list steps; finishing the work needs tools, state, and a pause for a person before it continues. In a company that is usually where it breaks: which tools to trust, how to keep context, when to stop, how to resume, and what it costs.
+
+If a model is going to sit in day-to-day work, it will sit here. I am writing the loop first — tools, memory, eval, cost, resume — then reading it against runtimes such as LangGraph.
 
 ## Writing
 
@@ -31,19 +36,10 @@ Same question throughout: how traffic turns into revenue, and how the system run
 | :--- | :--- |
 | Ads | OpenRTB, header bidding, App SDK, RTA, consent and attribution |
 | Infra | Netty, Kafka, Flink, Redis, availability, Kubernetes |
-| Models | Features, recall → rank → re-rank, online inference; agents |
+| Models | Features, recall → rank → re-rank, online inference |
+| Agents | Loop, tools, memory, eval, resume, and how frameworks map to that |
 
 I draw the diagrams. I write the trade-offs. No vendor posts.
-
-## Stack
-
-| | |
-| :--- | :--- |
-| Languages | Java (primary), Go, C++, Python |
-| Ads | OpenRTB, Prebid, RTA |
-| Server | Netty, Dubbo, Redis, Kafka, Flink, MySQL |
-| Models | PyTorch, ONNX, features and online scoring |
-| Deploy | Kubernetes, Grafana |
 
 ---
 
