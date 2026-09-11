@@ -1,10 +1,8 @@
-# Hi, I'm Charles Shao · 邵彦伦
+# Charles
+
+**AdTech Engineer** · Programmatic / Bidding · [cylshao.com](https://cylshao.com)
 
 [English](#english) · [中文](#中文)
-
-AdTech engineer · writing at [cylshao.com](https://cylshao.com)
-
-程序化广告工程师 · 笔记写在 [cylshao.com](https://cylshao.com)
 
 ---
 
@@ -12,37 +10,44 @@ AdTech engineer · writing at [cylshao.com](https://cylshao.com)
 
 ## English
 
-I build and write about the systems that turn traffic into revenue — from OpenRTB bidders under a tight `tmax`, through Kafka / Flink event backbones, to ranking features and agent loops.
+Programmatic advertising engineer (~5 years). Build DSP bidding engines and the infra around them — ms-level latency, high QPS, production systems at large request scale.
 
-About five years in programmatic AdTech. Day job: DSP bidding engines and the infra around them (ms-level latency, high QPS, 99.9% availability at large request scale). Side habit: publish the trade-offs I wish I'd found written down.
+### Experience highlights
 
-### What I write about · [cylshao.com](https://cylshao.com)
+- Led DSP bidder core path and platform infra; grew daily request volume from tens of millions to tens of billions; sustained **99.9%** availability with elastic, self-healing operations
+- End-to-end bidding under `tmax`: OpenRTB parse → targeting → recall → score → bid / rank → fill; timeout budgets, circuit breaking, degradation, bulkhead isolation
+- Delivery controls: multi-dimension frequency capping, budget pacing (target curve + PID), campaign compile → bitmap inverted index → full / incremental publish
+- RTA: ask advertisers before bid with ~5ms budget, cache TTL, fail-open / fail-closed under privacy constraints
+- Decoupled model inference from bidder into a high-concurrency serving layer (PyTorch → ONNX, multi-version load, batch scoring); online CTR / CVR with **P99** as the KPI
+- Led a 20+ person monetization team through a full commercial loop; evaluate designs by **eCPM / ROAS / cost**, not only “does it run”
 
-Three tracks, one through-line: **how ads actually work in production**.
+### Tech stack
 
-| Track | Topics |
+| Area | Skills |
 | --- | --- |
-| **A · Ad business & ecosystem** | OpenRTB / RTB & PMP, header bidding & Prebid, App SDK / mediation, RTA, pacing & frequency capping, supply-chain transparency, TCF / identity / attribution |
-| **B · High-concurrency infra** | Netty, Kafka, Flink, Redis & caching, HA / rate-limit / resilience, MySQL & OLAP, Dubbo / K8s deployment |
-| **C · Model & AI apps** | Feature engineering, recall → rank → re-rank, online inference serving; hand-rolled agent loops (tools, memory, eval, guardrails, LangGraph) |
+| Languages | Java (primary, JVM tuning), Go, C++, Python, Vue 3 / H5 |
+| Bidding & protocols | OpenRTB 2.5 / 2.6, RTB / PMP, Header Bidding / Prebid, RTA, schain / SPO |
+| Server | Netty, Dubbo, Nacos, Sentinel, Protobuf / gRPC, Caffeine |
+| Data & middleware | Redis, MySQL, Kafka, Flume, Flink, Spark, Doris / ClickHouse, InfluxDB |
+| ML / serving | PyTorch, ONNX, feature engineering, CTR / CVR online scoring, batch inference |
+| Cloud & observability | Kubernetes, Grafana, Jenkins, canary / blue-green, chaos engineering |
+| Mobile monetization | Mediation, in-app bidding, rewarded / interstitial formats, MMP / SKAN |
 
-~160 essays so far — diagrams, production trade-offs, no vendor fluff.
+### Writing · [cylshao.com](https://cylshao.com)
 
-### Focus areas
+~160 essays across three tracks:
 
-- **Bidding path** — OpenRTB parse → targeting → recall → score → bid, under a hard latency budget
-- **Event backbone** — Kafka / Flume / Flink for billing, features, pacing, and anti-fraud
-- **Model serving** — CTR/CVR inference decoupled from the bidder (ONNX, batching, P99)
-- **Agent engineering** — build the loop yourself first: tools, context/memory, eval, cost & resume; then frameworks
+| Track | Focus |
+| --- | --- |
+| A · Ad business & ecosystem | OpenRTB, HB / Prebid, App SDK, RTA, pacing / freq cap, TCF / identity / attribution |
+| B · High-concurrency infra | Netty, Kafka, Flink, Redis, HA / resilience, MySQL / OLAP, Dubbo / K8s |
+| C · Models & AI apps | Features, recall → rank → re-rank, inference serving; agent loops (tools, memory, eval, LangGraph) |
 
-### Elsewhere
+### Links
 
-- Blog: [cylshao.com](https://cylshao.com)
-- LinkedIn: [linkedin.com/in/cylshao](https://www.linkedin.com/in/cylshao/)
-- X: [@cylshao](https://x.com/cylshao)
-- Mail: charles [at] cylshao.com · charlesshao1024 [at] gmail.com
+[Blog](https://cylshao.com) · [LinkedIn](https://www.linkedin.com/in/cylshao/) · [X](https://x.com/cylshao) · charles [at] cylshao.com
 
-> Based in Asia (UTC+8). Writing mostly in Chinese with English domain terms; DMs in either language are fine.
+*Asia-Pacific · UTC+8 · EN / 中文*
 
 ---
 
@@ -50,38 +55,41 @@ Three tracks, one through-line: **how ads actually work in production**.
 
 ## 中文
 
-我做也写「流量怎么变成收入」这条链路上的系统——从 `tmax` 卡死的 OpenRTB 竞价，到 Kafka / Flink 事件中枢，再到排序特征与 Agent 循环。
+程序化广告工程师（约 5 年）。做 DSP 竞价引擎与周边基建——毫秒级延迟、高 QPS、大体量请求下的生产系统。
 
-程序化广告大约五年。本职是 DSP 竞价引擎与周边基建（毫秒级延迟、高 QPS、大体量请求下 99.9% 可用性）。业余习惯：把当时怎么想的、踩过什么、为什么那样选写下来——网上真正能用的细节往往要么太粗，要么关键处略过了。
+### 工作内容
 
-### 在写什么 · [cylshao.com](https://cylshao.com)
+- 主导 DSP Bidder 核心链路与平台基建；日请求从千万级做到百亿级；可用性稳定在 **99.9%**，可弹性、可自愈
+- `tmax` 约束下的端到端竞价：OpenRTB 解析 → 定向 → 召回 → 打分 → 出价 / 排序 → 填充；超时预算、熔断、降级、舱壁隔离
+- 投放控制：多维频控、预算 Pacing（目标曲线 + PID）、Campaign 近线编译 → 位图倒排 → 全量 / 增量发布
+- RTA：竞价前实时询问广告主，约 5ms 预算、缓存 TTL、fail-open / fail-closed，在隐私约束下用第一方数据影响出价
+- 将模型推理从 Bidder 解耦为高并发服务（PyTorch → ONNX、多版本加载、批量打分）；CTR / CVR 在线化，以 **P99** 为链路 KPI
+- 带过 20+ 人商业化团队并跑通变现闭环；用 **eCPM / ROAS / 成本** 衡量方案，而不只看「系统能否跑起来」
 
-三个轨道，一条主线：**广告在生产里到底怎么跑**。
+### 技术栈
 
-| 轨道 | 主题 |
+| 类别 | 技术 |
 | --- | --- |
-| **A · 广告业务与生态** | OpenRTB / RTB·PMP、Header Bidding / Prebid、App SDK / 聚合、RTA、Pacing / 频控、供应链透明度、TCF / 身份 / 归因 |
-| **B · 高并发工程底座** | Netty、Kafka、Flink、Redis 与缓存、高可用 / 限流 / 依赖韧性、MySQL 与 OLAP、Dubbo / K8s 部署 |
-| **C · 模型工程与 AI 应用** | 特征工程、召回 → 精排 → 重排、在线推理服务；手搓 Agent 循环（工具、记忆、评测、护栏、LangGraph） |
+| 语言 | Java（主力，JVM 调优）、Go、C++、Python、Vue 3 / H5 |
+| 竞价与协议 | OpenRTB 2.5 / 2.6、RTB / PMP、Header Bidding / Prebid、RTA、schain / SPO |
+| 服务端 | Netty、Dubbo、Nacos、Sentinel、Protobuf / gRPC、Caffeine |
+| 数据与中间件 | Redis、MySQL、Kafka、Flume、Flink、Spark、Doris / ClickHouse、InfluxDB |
+| 模型与推理 | PyTorch、ONNX、特征工程、CTR / CVR 在线打分、批量推理 |
+| 云原生与可观测 | Kubernetes、Grafana、Jenkins、金丝雀 / 蓝绿、混沌工程 |
+| 移动变现 | Mediation、In-App Bidding、激励视频 / 插屏等格式、MMP / SKAN |
 
-目前约 160 篇——配图、写取舍，不写软文。
+### 写作 · [cylshao.com](https://cylshao.com)
 
-### 关注点
+约 160 篇，三个轨道：
 
-- **竞价链路** — OpenRTB 解析 → 定向 → 召回 → 打分 → 出价，死磕延迟预算
-- **事件中枢** — Kafka / Flume / Flink 撑计费、特征、pacing、反作弊
-- **推理服务** — CTR/CVR 从 Bidder 解耦（ONNX、批量打分、P99）
-- **Agent 工程** — 先自己把循环拆开：工具、上下文与记忆、评测、成本与续跑；再对照框架
+| 轨道 | 内容 |
+| --- | --- |
+| A · 广告业务与生态 | OpenRTB、HB / Prebid、App SDK、RTA、Pacing / 频控、TCF / 身份 / 归因 |
+| B · 高并发工程底座 | Netty、Kafka、Flink、Redis、高可用 / 韧性、MySQL / OLAP、Dubbo / K8s |
+| C · 模型工程与 AI | 特征、召回 → 精排 → 重排、推理服务；Agent 循环（工具、记忆、评测、LangGraph） |
 
-### 找到我
+### 链接
 
-- 博客：[cylshao.com](https://cylshao.com)
-- LinkedIn：[linkedin.com/in/cylshao](https://www.linkedin.com/in/cylshao/)
-- X：[@cylshao](https://x.com/cylshao)
-- 邮箱：charles [at] cylshao.com · charlesshao1024 [at] gmail.com
+[博客](https://cylshao.com) · [LinkedIn](https://www.linkedin.com/in/cylshao/) · [X](https://x.com/cylshao) · charles [at] cylshao.com
 
-> 常驻亚太（UTC+8）。博客以中文为主、保留领域英文术语；中英文私信都可以。
-
----
-
-> 如切如磋，如琢如磨。
+*亚太 · UTC+8 · 中文 / EN*
