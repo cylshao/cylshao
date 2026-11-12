@@ -4,8 +4,6 @@
 
 **Ad tech engineer** · DSP bidding · High-throughput, low-latency systems · AI agents
 
-**~1M** peak QPS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;**10–30 ms** DSP latency budget
-
 <sub>[English](#about)&nbsp;&nbsp;·&nbsp;&nbsp;[中文](#more-languages)&nbsp;&nbsp;·&nbsp;&nbsp;[日本語](#more-languages)&nbsp;&nbsp;·&nbsp;&nbsp;[한국어](#more-languages)&nbsp;&nbsp;·&nbsp;&nbsp;[Español](#more-languages)</sub>
 
 </div>
