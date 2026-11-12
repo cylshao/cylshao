@@ -6,12 +6,6 @@
 
 **~1M** peak QPS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;**10–30 ms** DSP latency budget
 
-[![Blog](https://img.shields.io/badge/Blog-cylshao.com-2f3542?style=flat-square)](https://cylshao.com)&nbsp;
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-cylshao-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cylshao/)&nbsp;
-[![Email](https://img.shields.io/badge/Email-charles@cylshao.com-EA4335?style=flat-square&logo=maildotru&logoColor=white)](mailto:charles@cylshao.com)&nbsp;
-[![Telegram](https://img.shields.io/badge/Telegram-@cylshao-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/cylshao)&nbsp;
-[![X](https://img.shields.io/badge/X-@cylshao-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/cylshao)
-
 <sub>[English](#about)&nbsp;&nbsp;·&nbsp;&nbsp;[中文](#more-languages)&nbsp;&nbsp;·&nbsp;&nbsp;[日本語](#more-languages)&nbsp;&nbsp;·&nbsp;&nbsp;[한국어](#more-languages)&nbsp;&nbsp;·&nbsp;&nbsp;[Español](#more-languages)</sub>
 
 </div>
@@ -197,8 +191,6 @@ Los artículos cubren las áreas siguientes. Todos vuelven a la misma pregunta: 
 ---
 
 <div align="center">
-
-charles@cylshao.com&nbsp;&nbsp;·&nbsp;&nbsp;UTC+8
 
 If you're working on similar things, feel free to reach out.
 
